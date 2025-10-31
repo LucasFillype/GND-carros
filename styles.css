@@ -1,0 +1,80 @@
+body{
+    font-family:"Inter", sans-serif; ;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+
+
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+
+    font-weight: 500;
+}
+
+
+
+.car-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 2rem;
+}
+
+
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-card img{
+    max-width: 80%;
+    border-radius: .25rem;
+    
+}
+
+.car-infos{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: .5rem;
+    padding: .5rem;
+    gap: .3rem;
+    width: 80%;
+
+    background-color:#D3D3D3;
+    border-radius: .25rem;
+}
+
+
+#car-name{
+    font-weight: 5600;
+}
+
+#car-version, #car-year, #car-transmission{
+    font-size: small;
+}
+
+#car-price{
+    font-weight: 500;
+}
+
+#cost-button{
+    background-color: #000000;
+    border: 1px solid #e7d2d2;
+    color: white;
+
+    border-radius: .25rem;
+    width: 30%;
+    padding: .4rem;
+}
+
