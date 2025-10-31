@@ -14,9 +14,15 @@ header{
 
 header a{
     text-decoration: none;
-    color: black;
+    color: #214115;
+    align-items: center;
 
     font-weight: 500;
+}
+
+.header-div{
+    display: flex;
+    align-items: center;
 }
 
 
