@@ -1,0 +1,29 @@
+button{
+    all: unset;
+    font-weight: 500;
+    color: var(--stroke-highlight);
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    &.btn-primary{
+        color: white;
+        background-color: #214115;
+    }
+
+    &.btn-secondary{
+        border: 1px solid var(--stroke-highlight);
+        margin-left: auto;
+    }
+
+    &:hover, &:focus{
+        background-color: rgb(60, 90, 32);
+    }
+}
+
+.actions-wrapper{
+    display: flex;
+    justify-content: end;
+    gap: .75rem;
+    margin-top: .75rem;
+}

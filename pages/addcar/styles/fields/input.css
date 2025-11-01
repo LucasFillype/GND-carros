@@ -1,0 +1,68 @@
+input, textarea, select, droparea {
+   appearance: none;
+   width: 100%;
+   border-radius: .5rem;
+   border: 1px solid var(--stroke-default);
+
+   padding: .75rem 1rem;
+
+   font: var(--text);
+}
+
+label{
+    font: var(--text-label);
+    color: var(--text-secondary);
+
+    display: block;
+    margin-bottom: .25rem;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: .25rem;
+    border-color: var(--stroke-highlight);
+    box-shadow: 0 0 0 4px var(--brand-primary-alpha);
+}
+
+.adress .flex{
+    gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]){
+    opacity: .5;
+}
+
+input{
+    &[disabled]{
+        background-color: var(--surface-disabled);
+
+        border: 1px solid var(--stroke-default);
+
+        color: var(--text-primary);
+    }
+
+    &:invalid{
+        border: .125rem solid var(--semantic-error);
+    }
+
+    & small{
+        font: var(--text-sm);
+        color: #78716c;
+
+        display: inline-block;
+        margin-top: .25rem;
+    }
+
+    &[required] + .error{
+        display: flex;
+        align-items: center;
+
+        gap: .25rem;
+        color: var(--semantic-error);
+        font: var(--text-small);
+    }
+
+    &:not(:focus):valid + .error{
+        display: none;
+
+    }
+}   
