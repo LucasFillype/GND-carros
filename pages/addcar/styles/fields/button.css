@@ -6,9 +6,19 @@ button{
     border-radius: .5rem;
     cursor: pointer;
 
+     margin-top: 2rem;
+
     &.btn-primary{
         color: white;
         background-color: #214115;
+
+        &:hover, &:focus{
+        background-color: rgb(60, 90, 32);
+
+       
+    }
+
+
     }
 
     &.btn-secondary{

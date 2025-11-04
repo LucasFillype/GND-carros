@@ -1,1 +1,0 @@
-const guests = document.querySelector('#guests')

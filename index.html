@@ -10,6 +10,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/button.css">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/checkbox.css">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/droparea.css">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/index.css">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/input.css">
+    <link rel="stylesheet" href="pages/addcar/styles/fields/radio.css">
+    <link rel="stylesheet" href="pages/addcar/styles/forms.css">
+    <link rel="stylesheet" href="pages/addcar/styles/global.css">
+    <link rel="stylesheet" href="pages/addcar/styles/index.css">
+    <link rel="stylesheet" href="pages/addcar/styles/layout.css">
+
 
     <title>Catálogo</title>
 </head>
@@ -25,23 +36,102 @@
             <a href="">Meus Carros</a>
         </div>
         <div class="header-div">
-            <img src="assets/icon-add.svg" alt="Mais">
-            <a href="pages/addcar/index.html">Adicionar Carro</a>
+            <button href="pages/addcar/index.html" data-modal="modal-1" id="modal-button">
+            <img src="assets/icon-add.svg" alt="Mais">Adicionar Carro</button>
         </div>
     </header>
-    <div class="car-card">
-        <div class="slide">
-            <img src="assets/gol.jpg" alt="Car-Img">
+    <div class="car-card"></div>
+
+    <dialog id="modal-1">
+        <div id="app">
+            <main>
+                <div class="main-container">
+                    <div class="back">
+                        <button id="back-button"><img src="pages/addcar/assets/icons/arrow-left-02.svg"
+                                alt="seta para esquerda"></button>
+                        <span>Voltar</span>
+                    </div>
+                    <h1>Informações dos carros</h1>
+                    <p>Preencha os dados abaixo para adicionar oo card.
+                    </p>
+
+                    <form method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend class="child-info"> informações do carro</legend>
+                            <div class="input-wrapper">
+                                <label for="fullname">Marca e Nome do veículo</label>
+                                <input id="fullname" type="text" placeholder="Digite o Nome" name="fullname">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Modelo</label>
+                                <input type="text" id="model" lang="pt-BR" name="birth" placeholder="Trendline">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Ano</label>
+                                <input type="year" id="year" lang="pt-BR" name="birth" placeholder="Digite o ano">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="">Preço</label>
+                                <input type="text" id="price" lang="pt-BR" name="birth"
+                                    placeholder="Digite o Preço pago">
+                            </div>
+
+                            <div class="select-wrapper">
+                                <label for="gender">Combustível</label>
+                                <select name="fuel" id="gender">
+                                    <option value="Gasolina">Gasolina</option>
+                                    <option value="Flex">Flex</option>
+                                    <option value="Diesel">Disel</option>
+                                </select>
+                            </div>
+
+                            <div class="select-wrapper">
+                                <label for="gender">Câmbio</label>
+                                <select name="transmission" id="gender">
+                                    <option value="Manual">Manual</option>
+                                    <option value="Automático">Automático</option>
+                                </select>
+                            </div>
+
+                            <div class="droparea-wrapper">
+
+                                <label for="birth-file">Fotos do Carro</label>
+
+                                <div class="dropzone">
+                                    <input type="file" id="foto-carro" name="foto-carro"></input>
+                                    <img id="preview" src="" alt="Foto selecionada" width="200">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M34.9552 18.0221C34.97 18.022 34.985 18.022 35 18.022C39.9706 18.022 44 22.0588 44 27.0386C44 31.6796 40.5 35.5016 36 36M34.9552 18.0221C34.9848 17.6921 35 17.3579 35 17.0202C35 10.9339 30.0752 6 24 6C18.2465 6 13.5247 10.4253 13.0408 16.0638M34.9552 18.0221C34.7506 20.2952 33.8572 22.3692 32.4856 24.033M13.0408 16.0638C7.96796 16.5475 4 20.8278 4 26.0366C4 30.8834 7.43552 34.9264 12 35.8546M13.0408 16.0638C13.3565 16.0337 13.6765 16.0183 14 16.0183C16.2516 16.0183 18.3295 16.7639 20.001 18.022"
+                                            stroke="#D6D3D1" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M24 26V42M24 26C22.5996 26 19.9831 29.9886 19 31M24 26C25.4004 26 28.017 29.9886 29 31"
+                                            stroke="#D6D3D1" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <p>Clique aqui para <br> selecionar os arquivos</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                                      
+                            <button class="btn-primary" type="button" id="button-submit">
+                                Enviar Para o card
+                            </button>
+                    </form>
+                </div>
+            </main>
+
+
         </div>
-        <div class="car-infos">
-            <label for="car-name" id="car-name">Volksvagem Fox</label>
-            <label for="car-version" id="car-version">1.0 Flex</label>
-            <label for="car-year" id="car-year">2011</label>
-            <label for="car-transmission" id="car-transmission">Manual</label>
-            <label for="car-price" id="car-price">R$29.000</label>
-            <button id="cost-button">Ver custos</button>
-        </div>
-    </div>
+    </dialog>
+
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>

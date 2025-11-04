@@ -20,6 +20,22 @@ header a{
     font-weight: 500;
 }
 
+header button{
+    display: flex;
+    align-items: center;
+    color: #214115;
+
+    padding: .5rem;
+
+    margin-top: 0;
+
+    border: 1px solid #214115;
+    
+    &:hover{
+        background-color: #D3D3D3 ;
+    }
+}
+
 .header-div{
     display: flex;
     align-items: center;
@@ -32,18 +48,20 @@ header a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 
     margin-top: 2rem;
 }
 
-
-.slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.car-name{
+    font-weight: 600;
+    font-size: medium;
 }
+
+
 .car-card img{
-    max-width: 80%;
+    width: 80%;
+    max-height: 80%;
     border-radius: .25rem;
     
 }
@@ -51,6 +69,7 @@ header a{
 .car-infos{
     display: flex;
     flex-direction: column;
+    color: #000000;
 
     margin-top: .5rem;
     padding: .5rem;
@@ -61,16 +80,21 @@ header a{
     border-radius: .25rem;
 }
 
+.preview{
+    max-width: 80%;
+    border-radius: .25rem;
 
-#car-name{
-    font-weight: 5600;
+    
 }
 
-#car-version, #car-year, #car-transmission{
+
+
+
+.car-version, #car-year, #car-transmission{
     font-size: small;
 }
 
-#car-price{
+.car-price{
     font-weight: 500;
 }
 
