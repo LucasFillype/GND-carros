@@ -68,24 +68,29 @@ header button{
     
 }
 
-.fotos{
-    max-width: 80%;
-}
+
 
 .foto-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: 1px solid red;    
     
+}
+
+.foto{
+    width: 100%;       /* Deve preencher 100% da largura do pai */
+    height: 100%;      /* Já está funcionando, preenchendo a altura */
+    object-fit: cover; /* Garante que não haja espaço vazio */
 }
 
 .car-infos{
     display: flex;
     flex-direction: column;
     color: #000000;
-
     margin-top: .5rem;
-    padding: .5rem;
+
     gap: .3rem;
     width: 80%;
 
