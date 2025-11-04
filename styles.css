@@ -69,8 +69,14 @@ header button{
 }
 
 .fotos{
+    max-width: 80%;
+}
+
+.foto-wrapper{
     display: flex;
     align-items: center;
+    justify-content: center;
+    
 }
 
 .car-infos{

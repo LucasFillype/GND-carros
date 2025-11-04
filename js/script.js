@@ -45,14 +45,17 @@ function submitForm() {
     card.classList.add("car-infos")
 
     //Colocando os valores reotornados nas divs
-    card.innerHTML = `
-  <img class="foto" src="${fotoURL}" alt="Foto do carro">
-  <div class="car-name">${nome}</div>
-  <div class="car-version">${modelo}</div>
-  <div class="car-year">${ano}</div>
-  <div class="car-transmission">${transmissao}</div>
-  <div class="car-fuel">${combustivel}</div>
-  <div class="car-price">${preco}</div>
+    card.innerHTML = 
+        `
+     <div class="foto-wrapper">
+      <img class="foto" src="${fotoURL}" alt="Foto do carro">
+     </div>
+     <div class="car-name">${nome}</div>
+     <div class="car-version">${modelo}</div>
+     <div class="car-year">${ano}</div>
+     <div class="car-transmission">${transmissao}</div>
+     <div class="car-fuel">${combustivel}</div>
+     <div class="car-price">${preco}</div>
         `
 
 

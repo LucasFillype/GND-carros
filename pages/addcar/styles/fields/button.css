@@ -12,12 +12,6 @@ button{
         color: white;
         background-color: #214115;
 
-        &:hover, &:focus{
-        background-color: rgb(60, 90, 32);
-
-       
-    }
-
 
     }
 
@@ -26,9 +20,6 @@ button{
         margin-left: auto;
     }
 
-    &:hover, &:focus{
-        background-color: rgb(60, 90, 32);
-    }
 }
 
 .actions-wrapper{
