@@ -1,16 +1,21 @@
 button{
     all: unset;
     font-weight: 500;
-    color: var(--stroke-highlight);
     padding: .75rem 1.5rem;
     border-radius: .5rem;
     cursor: pointer;
-
-     margin-top: 2rem;
+    margin-top: 2rem;
+    
 
     &.btn-primary{
-        color: white;
-        background-color: #214115;
+        color: #214115;
+        border: 1px solid #214115;
+
+        align-items: center;
+
+        &:hover{
+            background-color:#D3D3D3 ;
+        }
 
 
     }

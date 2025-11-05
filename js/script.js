@@ -9,7 +9,7 @@ const modal = document.getElementById("modal-1")
 
 
 openFormButton.onclick = function (){
-    modal.showModal();
+    modal.show();
 }
 
 //Transformando em o arquivo file em Foto visível pelo HTML
