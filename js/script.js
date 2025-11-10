@@ -29,6 +29,7 @@ inputFoto.addEventListener("change", function () {
 function submitForm() {
     const buttonSubmit = document.getElementById("button-submit")
     let carCard = document.querySelector(".car-card")
+    
 
     // Valor dos inputs
     const nome = document.getElementById("fullname").value;

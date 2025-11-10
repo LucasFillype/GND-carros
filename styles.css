@@ -1,5 +1,6 @@
 body{
-    font-family:"Inter", sans-serif; ;
+    font-family:"Inter", sans-serif;
+    background-color: whitesmoke;
 }
 
 header{
@@ -7,23 +8,30 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
+    padding: .5rem;
+   
+
+    color: white;
+    background-color: #214115;
 
 
 }
 
 header a{
     text-decoration: none;
-    color: #214115;
+    color: white;
     align-items: center;
 
     font-weight: 500;
+
+    
 }
 
 header button{
     display: flex;
     align-items: center;
-    color: #214115;
+    color: white;
+    flex-direction: column;
 
     padding: .5rem;
 
@@ -32,13 +40,21 @@ header button{
     border: 1px solid #214115;
     
     &:hover{
-        background-color: #D3D3D3 ;
+        transform: translateY(-5px);
+        transition: transform 0.3s ease-out; 
     }
 }
 
 .header-div{
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    &:hover{
+        transform: translateY(-5px);
+        transition: transform 0.3s ease-out; 
+    }
+
 }
 
 
