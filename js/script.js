@@ -8,7 +8,7 @@ const openFormButton = document.getElementById("modal-button");
 const modal = document.getElementById("modal-1")
 
 
-openFormButton.onclick = function (){
+openFormButton.onclick = function () {
     modal.show();
 }
 
@@ -29,7 +29,7 @@ inputFoto.addEventListener("change", function () {
 function submitForm() {
     const buttonSubmit = document.getElementById("button-submit")
     let carCard = document.querySelector(".car-card")
-    
+
 
     // Valor dos inputs
     const nome = document.getElementById("fullname").value;
@@ -39,6 +39,9 @@ function submitForm() {
     const transmissao = document.querySelector('select[name="transmission"]').value;
     const combustivel = document.querySelector('select[name="fuel"]').value;
 
+    //Botão info dentro do card
+    const infoButton = document.getElementById("info-button");
+
     console.log(nome);
 
     //Criando o Card
@@ -46,7 +49,7 @@ function submitForm() {
     card.classList.add("car-infos")
 
     //Colocando os valores reotornados nas divs
-    card.innerHTML = 
+    card.innerHTML =
         `
      <div class="foto-wrapper">
       <img class="foto" src="${fotoURL}" alt="Foto do carro">
@@ -56,13 +59,16 @@ function submitForm() {
      <div class="car-year">${ano}</div>
      <div class="car-transmission">${transmissao}</div>
      <div class="car-fuel">${combustivel}</div>
-     <div class="car-price">${preco}</div>
+     <div class="car-price">
+      ${preco} 
+      <button id="info-button">Informações</button>
+     </div>
         `
 
 
     carCard.appendChild(card);
 
-   
+
     // ✅ Exibir alerta antes de redirecionar
     alert("🚘 Seu carro foi enviado com sucesso!");
 
@@ -73,7 +79,7 @@ function submitForm() {
 
 const voltar = document.getElementById("back-button")
 
-voltar.onclick = function(){
+voltar.onclick = function () {
     modal.close()
 }
 
